@@ -9,13 +9,19 @@
 /* Begin PBXBuildFile section */
 		4EAC745A2C20DA5A002290BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC74592C20DA5A002290BE /* AppDelegate.swift */; };
 		4EAC745C2C20DA5A002290BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC745B2C20DA5A002290BE /* SceneDelegate.swift */; };
-		4EAC745E2C20DA5A002290BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC745D2C20DA5A002290BE /* ViewController.swift */; };
 		4EAC74612C20DA5A002290BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC745F2C20DA5A002290BE /* Main.storyboard */; };
 		4EAC74632C20DA5C002290BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC74622C20DA5C002290BE /* Assets.xcassets */; };
 		4EAC74662C20DA5C002290BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC74642C20DA5C002290BE /* LaunchScreen.storyboard */; };
 		4EAC74712C20DA5C002290BE /* iTunesArtists_MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC74702C20DA5C002290BE /* iTunesArtists_MVVMTests.swift */; };
 		4EAC747B2C20DA5C002290BE /* iTunesArtists_MVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC747A2C20DA5C002290BE /* iTunesArtists_MVVMUITests.swift */; };
 		4EAC747D2C20DA5C002290BE /* iTunesArtists_MVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC747C2C20DA5C002290BE /* iTunesArtists_MVVMUITestsLaunchTests.swift */; };
+		4EAC748E2C20DAD0002290BE /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC748D2C20DAD0002290BE /* ArtistViewController.swift */; };
+		4EAC74902C20DB0B002290BE /* ArtistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC748F2C20DB0B002290BE /* ArtistTableViewController.swift */; };
+		4EAC74922C20DB20002290BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC74912C20DB20002290BE /* Constants.swift */; };
+		4EAC74942C20DB3A002290BE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC74932C20DB3A002290BE /* Models.swift */; };
+		4EAC74962C20DB52002290BE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC74952C20DB52002290BE /* ViewModel.swift */; };
+		4EAC74992C20DB96002290BE /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC74982C20DB96002290BE /* ArtistTableViewCell.swift */; };
+		4EAC749C2C20DC18002290BE /* API Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC749B2C20DC18002290BE /* API Manager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +45,6 @@
 		4EAC74562C20DA5A002290BE /* iTunesArtists_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesArtists_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EAC74592C20DA5A002290BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EAC745B2C20DA5A002290BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4EAC745D2C20DA5A002290BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4EAC74602C20DA5A002290BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EAC74622C20DA5C002290BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EAC74652C20DA5C002290BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,13 @@
 		4EAC74762C20DA5C002290BE /* iTunesArtists_MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesArtists_MVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EAC747A2C20DA5C002290BE /* iTunesArtists_MVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesArtists_MVVMUITests.swift; sourceTree = "<group>"; };
 		4EAC747C2C20DA5C002290BE /* iTunesArtists_MVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesArtists_MVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4EAC748D2C20DAD0002290BE /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
+		4EAC748F2C20DB0B002290BE /* ArtistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewController.swift; sourceTree = "<group>"; };
+		4EAC74912C20DB20002290BE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4EAC74932C20DB3A002290BE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		4EAC74952C20DB52002290BE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4EAC74982C20DB96002290BE /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
+		4EAC749B2C20DC18002290BE /* API Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Manager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +111,14 @@
 		4EAC74582C20DA5A002290BE /* iTunesArtists_MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				4EAC749A2C20DC00002290BE /* Network Manager */,
+				4EAC74972C20DB76002290BE /* View */,
+				4EAC748C2C20DA8E002290BE /* ViewController */,
+				4EAC748B2C20DA87002290BE /* Common */,
+				4EAC74892C20DA65002290BE /* Model */,
+				4EAC748A2C20DA6C002290BE /* ViewModel */,
 				4EAC74592C20DA5A002290BE /* AppDelegate.swift */,
 				4EAC745B2C20DA5A002290BE /* SceneDelegate.swift */,
-				4EAC745D2C20DA5A002290BE /* ViewController.swift */,
-				4EAC745F2C20DA5A002290BE /* Main.storyboard */,
 				4EAC74622C20DA5C002290BE /* Assets.xcassets */,
 				4EAC74642C20DA5C002290BE /* LaunchScreen.storyboard */,
 				4EAC74672C20DA5C002290BE /* Info.plist */,
@@ -125,6 +141,56 @@
 				4EAC747C2C20DA5C002290BE /* iTunesArtists_MVVMUITestsLaunchTests.swift */,
 			);
 			path = iTunesArtists_MVVMUITests;
+			sourceTree = "<group>";
+		};
+		4EAC74892C20DA65002290BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC74932C20DB3A002290BE /* Models.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EAC748A2C20DA6C002290BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC74952C20DB52002290BE /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4EAC748B2C20DA87002290BE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC74912C20DB20002290BE /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4EAC748C2C20DA8E002290BE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC748D2C20DAD0002290BE /* ArtistViewController.swift */,
+				4EAC748F2C20DB0B002290BE /* ArtistTableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4EAC74972C20DB76002290BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC74982C20DB96002290BE /* ArtistTableViewCell.swift */,
+				4EAC745F2C20DA5A002290BE /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EAC749A2C20DC00002290BE /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC749B2C20DC18002290BE /* API Manager.swift */,
+			);
+			path = "Network Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +324,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EAC745E2C20DA5A002290BE /* ViewController.swift in Sources */,
+				4EAC74922C20DB20002290BE /* Constants.swift in Sources */,
+				4EAC749C2C20DC18002290BE /* API Manager.swift in Sources */,
+				4EAC74902C20DB0B002290BE /* ArtistTableViewController.swift in Sources */,
 				4EAC745A2C20DA5A002290BE /* AppDelegate.swift in Sources */,
+				4EAC74942C20DB3A002290BE /* Models.swift in Sources */,
 				4EAC745C2C20DA5A002290BE /* SceneDelegate.swift in Sources */,
+				4EAC748E2C20DAD0002290BE /* ArtistViewController.swift in Sources */,
+				4EAC74992C20DB96002290BE /* ArtistTableViewCell.swift in Sources */,
+				4EAC74962C20DB52002290BE /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
