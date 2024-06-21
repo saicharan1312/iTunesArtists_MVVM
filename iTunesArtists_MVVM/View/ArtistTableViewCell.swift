@@ -25,12 +25,12 @@ class ArtistTableViewCell: UITableViewCell {
     }
     
     func setData(dataInput: Artists) {
-        artistNameLabel.text = dataInput.artistName
+        artistNameLabel.text = dataInput.artistName ?? ""
         countryLabel.text = dataInput.country
         genreNameLabel.text = dataInput.primaryGenreName
-        priceLabel.text = "$\(dataInput.collectionPrice )"
+        priceLabel.text = "$\(dataInput.collectionPrice))"
         
-        APIManager.sharedInstance.getImageData(url: dataInput.artworkUrl60 ) { data in
+        APIManager.sharedInstance.getImageData(url: dataInput.artworkUrl60 ?? "nil" ) { data in
             guard let recievedImage = data else {
                 print(Cautions.invalidImage.rawValue)
                 return

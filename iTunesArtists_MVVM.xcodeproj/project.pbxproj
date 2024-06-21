@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E11EB1C2C26187100005268 /* MockAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E11EB1B2C26187100005268 /* MockAPIManager.swift */; };
 		4EAC745A2C20DA5A002290BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC74592C20DA5A002290BE /* AppDelegate.swift */; };
 		4EAC745C2C20DA5A002290BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC745B2C20DA5A002290BE /* SceneDelegate.swift */; };
 		4EAC74612C20DA5A002290BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC745F2C20DA5A002290BE /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E11EB1B2C26187100005268 /* MockAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIManager.swift; sourceTree = "<group>"; };
 		4EAC74562C20DA5A002290BE /* iTunesArtists_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesArtists_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EAC74592C20DA5A002290BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EAC745B2C20DA5A002290BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				4EAC749B2C20DC18002290BE /* API Manager.swift */,
+				4E11EB1B2C26187100005268 /* MockAPIManager.swift */,
 			);
 			path = "Network Manager";
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				4EAC745C2C20DA5A002290BE /* SceneDelegate.swift in Sources */,
 				4EAC748E2C20DAD0002290BE /* ArtistViewController.swift in Sources */,
 				4EAC74992C20DB96002290BE /* ArtistTableViewCell.swift in Sources */,
+				4E11EB1C2C26187100005268 /* MockAPIManager.swift in Sources */,
 				4EAC74962C20DB52002290BE /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

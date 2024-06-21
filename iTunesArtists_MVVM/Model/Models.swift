@@ -8,15 +8,23 @@
 import Foundation
 
 struct Artists: Codable {
-    let artistName: String
-    let country: String
-    let primaryGenreName: String
+    let artistName: String?
+    let country: String?
+    let primaryGenreName: String?
     let collectionPrice: Float
-    let artworkUrl60: String
+    let artworkUrl60: String?
+    
+    enum CodingKeys : String, CodingKey {
+        case artistName 
+        case country
+        case primaryGenreName
+        case collectionPrice
+        case artworkUrl60
+    }
 }
 
 struct ArtistsInfo: Codable {
-    let resultCount: Int
-    let results:[Artists]
+    let resultCount: Int?
+    let results:[Artists]?
 }
 

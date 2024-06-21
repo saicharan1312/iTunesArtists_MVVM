@@ -9,18 +9,28 @@ import XCTest
 @testable import iTunesArtists_MVVM
 
 class iTunesArtists_MVVMTests: XCTestCase {
+    
     var artistObj: ArtistViewController?
     var viewModelObj: ArtistViewModel?
+    var mockAPIManagerObj: MockAPIManager?
+    
     override func setUpWithError() throws {
         artistObj = ArtistViewController()
         viewModelObj = ArtistViewModel()
+        mockAPIManagerObj = MockAPIManager()
     }
 
     override func tearDownWithError() throws {
         artistObj = nil
         viewModelObj = nil
+        mockAPIManagerObj = nil
     }
 
+    func testFetchData() throws {
+        viewModelObj?.fetchData(url: "None"){}
+        XCTAssertEqual(viewModelObj?.artistData.count, 1)
+    }
+    
     func testUpdatedURL() throws {
         XCTAssertNotNil(artistObj)
         let result1 = artistObj?.updatedUrl("a", "b")
@@ -43,7 +53,7 @@ class iTunesArtists_MVVMTests: XCTestCase {
         XCTAssertEqual(result4, "-")
     }
     
-    func testFetchData() throws {
+    func testFetchDataAPI() throws {
         XCTAssertNotNil(viewModelObj)
         var a: String = ""
         var b: Int = 0
@@ -64,7 +74,7 @@ class iTunesArtists_MVVMTests: XCTestCase {
                 a = "Error"
             }
             if let serverData = data {
-                b = serverData.resultCount
+                b = serverData.resultCount ?? 1
                 print(b)
             }
             XCTAssertEqual(a, "")
@@ -75,7 +85,7 @@ class iTunesArtists_MVVMTests: XCTestCase {
                 a = "Error"
             }
             if let serverData = data {
-                b = serverData.resultCount
+                b = serverData.resultCount ?? 1
                 print(b)
             }
             XCTAssertEqual(a, "")
