@@ -27,9 +27,13 @@ class iTunesArtists_MVVMTests: XCTestCase {
     }
 
     func testFetchData() throws {
-        viewModelObj?.fetchData(url: "None"){}
-        XCTAssertEqual(viewModelObj?.artistData.count, 1)
+        viewModelObj?.fetchDataMock(url: "") {}
+        XCTAssertEqual(viewModelObj?.artistData.count, 10)
+        viewModelObj?.fetchData(url: "urls.artistDataUrl.rawValue"+"a"){}
+        XCTAssertEqual(viewModelObj?.artistData.count, 10)
     }
+    
+    
     
     func testUpdatedURL() throws {
         XCTAssertNotNil(artistObj)

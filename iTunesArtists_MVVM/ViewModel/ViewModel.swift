@@ -8,17 +8,25 @@
 import Foundation
 
 class ArtistViewModel {
-    
-    var apiManagerObj = MockAPIManager()
     var artistData: [Artists] = []
     
-    func fetchData(url: String, completion: @escaping () -> ()) {
-//       APIManager.sharedInstance.fetchDataFromAPI(url: url) { data, error in
-        apiManagerObj.fetchDataFromAPI(url: url) { data, error in
+    func fetchDataMock(url: String, completion: @escaping () -> ()) {
+        MockAPIManager.mockObj.fetchDataFromAPI(url: url) { data, error in
             if let artistArr = data?.results {
                 self.artistData = artistArr
                 completion()
             }
         }
     }
+    
+    func fetchData(url: String, completion: @escaping () -> ()) {
+       APIManager.sharedInstance.fetchDataFromAPI(url: url) { data, error in
+        
+            if let artistArr = data?.results {
+                self.artistData = artistArr
+                print(self.artistData.count)
+                completion()
+            }
+        }
+}
 }

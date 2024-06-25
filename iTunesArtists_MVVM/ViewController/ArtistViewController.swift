@@ -9,6 +9,7 @@ import UIKit
 
 class ArtistViewController: UIViewController {
 
+    @IBOutlet weak var networkSlider: UISegmentedControl!
     @IBOutlet weak var searchArtist: UISearchBar!
     @IBOutlet weak var artistTableView: UITableView!
     var artistViewModelObj = ArtistViewModel()
@@ -26,14 +27,23 @@ class ArtistViewController: UIViewController {
 //MARK: - Network Call
 extension ArtistViewController {
     func dataFetch(searchBarText: String) {
+        if networkSlider.selectedSegmentIndex == 0 {
         let searchDataUrl = updatedUrl(urls.artistDataUrl.rawValue, searchBarText)
         artistViewModelObj.fetchData(url: searchDataUrl) {
             DispatchQueue.main.async {
                 self.artistTableView.reloadData()
-                
             }
         }
     }
+        else {
+            let searchDataUrl = updatedUrl(urls.artistDataUrl.rawValue, searchBarText)
+            artistViewModelObj.fetchDataMock(url: searchDataUrl) {
+                DispatchQueue.main.async {
+                    self.artistTableView.reloadData()
+                }
+        }
+    }
+}
     func updatedUrl(_ url: String,_ text: String)->String {
         return url+text
     }
@@ -45,9 +55,9 @@ extension ArtistViewController: UISearchBarDelegate {
             dataFetch(searchBarText: searchText)
         }
         else {
-            artistTableView.reloadData()
             dataFetch(searchBarText: "")
         }
+        artistTableView.reloadData()
     }
 }
 
