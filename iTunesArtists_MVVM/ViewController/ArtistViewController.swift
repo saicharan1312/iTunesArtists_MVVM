@@ -6,15 +6,18 @@
 
 
 import UIKit
+import MBProgressHUD
 
 class ArtistViewController: UIViewController {
 
     @IBOutlet weak var networkSlider: UISegmentedControl!
     @IBOutlet weak var searchArtist: UISearchBar!
     @IBOutlet weak var artistTableView: UITableView!
+    var hud: MBProgressHUD!
     var artistViewModelObj = ArtistViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         searchArtist.delegate = self
         tableInit()
         
@@ -27,11 +30,15 @@ class ArtistViewController: UIViewController {
 //MARK: - Network Call
 extension ArtistViewController {
     func dataFetch(searchBarText: String) {
+        DispatchQueue.main.async {
+            self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        }
         if networkSlider.selectedSegmentIndex == 0 {
         let searchDataUrl = updatedUrl(urls.artistDataUrl.rawValue, searchBarText)
         artistViewModelObj.fetchData(url: searchDataUrl) {
             DispatchQueue.main.async {
                 self.artistTableView.reloadData()
+                self.hud.hide(animated: true)
             }
         }
     }
@@ -40,6 +47,7 @@ extension ArtistViewController {
             artistViewModelObj.fetchDataMock(url: searchDataUrl) {
                 DispatchQueue.main.async {
                     self.artistTableView.reloadData()
+                    self.hud.hide(animated: true)
                 }
         }
     }
@@ -52,7 +60,7 @@ extension ArtistViewController {
 extension ArtistViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if !searchText.isEmpty  {
-            dataFetch(searchBarText: searchText)
+            dataFetch(searchBarText: searchText.lowercased())
         }
         else {
             dataFetch(searchBarText: "")

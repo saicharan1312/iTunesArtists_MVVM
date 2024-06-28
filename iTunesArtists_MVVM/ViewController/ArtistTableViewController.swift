@@ -17,9 +17,12 @@ extension ArtistViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = artistTableView.dequeueReusableCell(withIdentifier: TableViewCellId.id1.rawValue, for: indexPath) as! ArtistTableViewCell
-        let info = artistViewModelObj.artistData[indexPath.row]
-        cell.setData(dataInput: info)
-        return cell
+        if indexPath.row < artistViewModelObj.artistData.count {
+            let info = artistViewModelObj.artistData[indexPath.row]
+            cell.setData(dataInput: info)
+            return cell
+        }
+        return UITableViewCell()
     }
 }
 
